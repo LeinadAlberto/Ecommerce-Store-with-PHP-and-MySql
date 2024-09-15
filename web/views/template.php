@@ -1,3 +1,7 @@
 <?php 
 
-echo "<h1>Hola soy el index</h1>";
+$path = TemplateController::path();
+
+echo "<pre>";
+    print_r($path);
+echo "</pre>";
