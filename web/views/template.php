@@ -38,14 +38,20 @@ $path = TemplateController::path();
 
         <div class="wrapper">
 
-            <!-- Navbar -->
-            <?php include "modules/navbar.php"; ?>
-            <!-- /.navbar -->
+            <?php 
+            
+                include "modules/top.php"; 
 
-            <!-- Main Sidebar Container -->
-            <?php include "modules/sidebar.php"; ?>
-            <!-- /.main sidebar container -->
+                /* Navbar */
+                include "modules/navbar.php"; 
+                /* /.navbar */
+                
+                /* Main Sidebar Container */
+                include "modules/sidebar.php";
+                /* /.main sidebar container */
 
+            ?>
+           
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
