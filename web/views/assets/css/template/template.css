@@ -1,0 +1,36 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* font-family: "Ubuntu Condensed", sans-serif; */
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+ul, ol {
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.topColor {
+    background: rgb(67, 3, 3); 
+    color: white;
+}
+
+.templateColor {
+    background: rgb(123, 55, 55);
+    /* background: #0CC0DF;  */
+    color: white;
+}
+
+.main-footer {
+    border-top: 0 !important;
+}
+

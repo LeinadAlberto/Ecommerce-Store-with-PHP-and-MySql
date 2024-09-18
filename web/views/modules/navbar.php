@@ -1,15 +1,3 @@
-<style>
-    .dropdown-toggle::after {
-        display: none !important;
-    }
-
-    ul {
-        padding: 0;
-        list-style: none;
-        text-decoration: none;
-    }
-</style>
-
 <div class="container py-2 py-lg-4">
 
     <div class="row">
@@ -36,7 +24,7 @@
                 <i class="fas fa-bars"></i>
             </a>
 
-            <div class="dropdown px-1 float-start" style="background: #0CC0DF; color: white;">
+            <div class="dropdown px-1 float-start templateColor">
                 
                 <a id="dropdownSubMenu1" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-uppercase">
 
@@ -322,7 +310,7 @@
 
                     <input class="form-control rounded-0 p-3 pe-5" type="search" placeholder="Buscar..." style="height: 40px;">
 
-                    <div class="input-group-append px-2" style="background: #0CC0DF; color: white;">
+                    <div class="input-group-append px-2 templateColor">
 
                         <button class="btn btn-navbar text-white" type="submit">
 
@@ -345,7 +333,7 @@
 
                 <a href="#">
 
-                    <button class="btn btn-default float-start rounded-0 border-0 py-2 px-3" style="background: #0CC0DF; color: white;">
+                    <button class="btn btn-default float-start rounded-0 border-0 py-2 px-3 templateColor">
 
                         <i class="fa fa-shopping-cart"></i>
 

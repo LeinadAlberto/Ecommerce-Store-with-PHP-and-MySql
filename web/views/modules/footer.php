@@ -1,10 +1,3 @@
-<style>
-    a:link, a:visited, a:hover, a:active {
-        text-decoration: none !important;
-        color: inherit !important;
-    }
-</style>
-
 <div class="container-fluid bg-dark small">
 
     <div class="container py-5 text-light">
@@ -187,7 +180,7 @@
 
                     <br>
 
-                    <input type="submit" value="Enviar" class="btn btn-default templateColor float-right border-0" style="background: #0CC0DF; color: white;">
+                    <input type="submit" value="Enviar" class="btn btn-default templateColor float-end border-0 templateColor">
 
                 </form>
 
@@ -199,7 +192,7 @@
 
 </div><!-- /.container-fluid -->
 
-<footer class="main-footer" style="background: black; color: white;">
+<footer class="main-footer topColor">
 
     <div class="container">
         
