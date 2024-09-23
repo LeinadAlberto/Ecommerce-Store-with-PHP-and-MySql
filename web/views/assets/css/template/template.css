@@ -24,7 +24,7 @@ a:link, a:visited, a:hover, a:active {
     color: white;
 }
 
-.templateColor {
+.templateColor, .templateColor:hover{
     background: rgb(123, 55, 55);
     /* background: #0CC0DF;  */
     color: white;
