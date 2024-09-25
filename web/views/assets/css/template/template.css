@@ -24,10 +24,10 @@ a:link, a:visited, a:hover, a:active {
     color: white;
 }
 
-.templateColor, .templateColor:hover{
-    background: rgb(123, 55, 55);
+.templateColor, .templateColor:hover, a.templateColor {
+    background: rgb(123, 55, 55) !important;
     /* background: #0CC0DF;  */
-    color: white;
+    color: white !important;
 }
 
 .main-footer {

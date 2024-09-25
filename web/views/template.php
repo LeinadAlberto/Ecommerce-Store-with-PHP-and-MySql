@@ -30,6 +30,8 @@ $path = TemplateController::path();
         <link rel="stylesheet" href="<?php echo $path ?>views/assets/css/plugins/adminlte/adminlte.min.css">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="<?php echo $path ?>views/assets/css/template/template.css">
+        <!-- CSS Productos -->
+        <link rel="stylesheet" href="<?php echo $path ?>views/assets/css/products/products.css">
 
         <!-- =============
                 JS

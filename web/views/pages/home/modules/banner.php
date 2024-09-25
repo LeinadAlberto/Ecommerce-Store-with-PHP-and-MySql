@@ -1,4 +1,4 @@
-<div class="container-fluid banner" style="position: relative; 
+<div class="banner" style="position: relative; 
     background: url('<?php echo $path; ?>views/assets/img/banner/1/default.jpg'); 
     background-size: cover; 
     background-position: center; 
