@@ -79,6 +79,8 @@ $path = TemplateController::path();
 
         <!-- AdminLTE App -->
         <script src="<?php echo $path ?>views/assets/js/plugins/adminlte/adminlte.min.js"></script>
+        <!-- Products JS -->
+        <script src="<?php echo $path ?>views/assets/js/products/products.js"></script>
 
     </body>
 

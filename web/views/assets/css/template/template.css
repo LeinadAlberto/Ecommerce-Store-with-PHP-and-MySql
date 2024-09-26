@@ -34,3 +34,9 @@ a:link, a:visited, a:hover, a:active {
     border-top: 0 !important;
 }
 
+.botonColor , .botonColor:hover {
+    background: rgb(165, 117, 117);
+    color: white;
+    font-size: 18px;
+}
+
