@@ -45,6 +45,9 @@ $path = TemplateController::path();
          <!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
         <script src="<?php echo $path ?>views/assets/js/plugins/jdSlider/jdSlider.js"></script>
 
+        <!-- Knob.js -->
+        <script src="<?php echo $path ?>views/assets/js/plugins/knob/knob.js"></script>
+
     </head>
 
     <body class="hold-transition sidebar-collapse layout-top-nav">

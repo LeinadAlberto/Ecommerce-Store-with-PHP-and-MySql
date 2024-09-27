@@ -26,9 +26,13 @@ $(document).on('click', '.btnView', function() {
     }
 
     btnType.each(function(i) {
-        
-        $(btnType[i]).removeClass('botonColor');
 
+        if ($(btnType[i]).attr('attr-index') == index ) {
+
+            $(btnType[i]).removeClass('botonColor');
+
+        }
+        
     });
 
     $(this).addClass('botonColor');
