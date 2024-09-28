@@ -1,4 +1,4 @@
-<script>
+
     $(function () {
         /* jQueryKnob */
 
@@ -65,4 +65,3 @@
 
     })
 
-</script>
