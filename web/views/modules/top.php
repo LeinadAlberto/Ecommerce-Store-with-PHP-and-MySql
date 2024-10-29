@@ -1,3 +1,22 @@
+<?php 
+
+/* =========================================
+        DATOS DE LAS REDES SOCIALES 
+=========================================== */
+$url = "socials";
+$method = "GET";
+$fields = array(); 
+
+$socials = CurlController::request($url, $method, $fields);
+
+if ($socials->status == 200) {
+
+    $socials = $socials->results;
+
+}
+
+?>
+
 <div class="container-fluid topColor">
 
     <div class="container">
@@ -9,49 +28,23 @@
 
                 <div class="d-flex justify-content-center">
 
-                    <div class="p-2">
+                    <?php foreach ($socials as $key => $value): ?>
 
-                        <a href="https://facebook.com" target="_blank" class="text-white">
+                        <div class="p-2">
 
-                            <i class="fab fa-facebook-f"></i>
+                            <a href="<?php echo $value->url_social; ?>" target="_blank">
 
-                        </a>
+                                <i class="<?php echo $value->icon_social; ?> <?php echo $value->color_social; ?>"></i>
 
-                    </div>
+                            </a>
 
-                    <div class="p-2">
+                        </div>
 
-                        <a href="https://youtube.com" target="_blank" class="text-white">
+                    <?php endforeach ?>
 
-                            <i class="fab fa-youtube"></i>
+                </div><!-- /.d-flex -->
 
-                        </a>
-
-                    </div>
-
-                    <div class="p-2">
-
-                        <a href="https://twitter.com" target="_blank" class="text-white">
-
-                            <i class="fab fa-twitter"></i>
-
-                        </a>
-
-                    </div>
-
-                    <div class="p-2">
-
-                        <a href="https://instagram.com" target="_blank" class="text-white">
-
-                            <i class="fab fa-instagram"></i>
-
-                        </a>
-
-                    </div>
-                
-                </div>
-
-            </div>
+            </div><!-- /.p-2 -->
 
             <!-- Enlaces de Ingresar y Crear cuenta -->
             <div class="p-2 small">

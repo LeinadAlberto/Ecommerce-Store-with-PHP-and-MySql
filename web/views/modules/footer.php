@@ -200,45 +200,19 @@
 
             <div class="d-flex justify-content-center" style="line-height: 0px;">
 
-                <div class="p-2">
+                <?php foreach ($socials as $key => $value): ?>
 
-                    <a href="https://facebook.com" target="_blank" class="text-white">
+                    <div class="p-2">
 
-                        <i class="fab fa-facebook-f"></i>
+                        <a href="<?php echo $value->url_social; ?>" target="_blank">
 
-                    </a>
+                            <i class="<?php echo $value->icon_social; ?> <?php echo $value->color_social; ?>"></i>
 
-                </div>
+                        </a>
 
-                <div class="p-2">
+                    </div>
 
-                    <a href="https://youtube.com" target="_blank" class="text-white">
-
-                        <i class="fab fa-youtube"></i>
-
-                    </a>
-
-                </div>
-
-                <div class="p-2">
-
-                    <a href="https://twitter.com" target="_blank" class="text-white">
-
-                        <i class="fab fa-twitter"></i>
-
-                    </a>
-
-                </div>
-
-                <div class="p-2">
-
-                    <a href="https://instagram.com" target="_blank" class="text-white">
-
-                        <i class="fab fa-instagram"></i>
-
-                    </a>
-
-                </div>
+                <?php endforeach ?>
 
             </div>
 
@@ -247,7 +221,7 @@
         <small>
             &copy; <?php echo date("Y"); ?> 
             Todos los derechos reservados. Sitio elaborado por 
-            <a href="lokywebdev.com" style="color: #0CC0DF !important;">LokyWebDev</a>.
+            <a href="https://lokywebdev.com" target="_black" style="color: #0CC0DF !important;">LokyWebDev</a>.
         </small>
 
     </div><!-- /.container -->

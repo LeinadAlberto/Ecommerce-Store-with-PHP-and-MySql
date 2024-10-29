@@ -1,5 +1,64 @@
 <?php 
+
+/* =========================
+        VARIABLE PATH
+==========================*/
 $path = TemplateController::path();
+
+/* =======================================
+        SOLICITUD GET DE TEMPLATE
+========================================*/
+$url = "templates?linkTo=active_template&equalTo=ok";
+$method = "GET";
+$fields = array(); 
+
+$template = CurlController::request($url, $method, $fields);
+
+if ($template->status == 200) {
+
+    $template = $template->results[0];
+
+} else { 
+
+    // Redireccionar a página 500
+
+} 
+
+/* =======================================
+          DATOS EN ARREGLO
+========================================*/
+$keywords = null;
+
+foreach (json_decode($template->keywords_template, true) as $key => $value) {
+
+    $keywords .= $value . ", ";
+
+}
+
+$keywords = substr($keywords, 0, -2);
+
+/* =======================================
+          DATOS EN OBJETO
+========================================*/
+$fontFamily = json_decode($template->fonts_template)->fontFamily;
+
+$fontBody = json_decode($template->fonts_template)->fontBody;
+
+$fontSlide = json_decode($template->fonts_template)->fontSlide;
+
+/* =======================================
+          DATOS EN JSON
+========================================*/
+$topColor = json_decode($template->colors_template)[0]->top;
+
+$templateColor =  json_decode($template->colors_template)[1]->template;
+
+/* echo "<pre>";
+
+    print_r(json_decode($template->colors_template)[1]->template);
+
+echo "</pre>"; */ 
+
 ?>
 
 <!DOCTYPE html>
@@ -9,13 +68,17 @@ $path = TemplateController::path();
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>AdminLTE 3 | Top Navigation + Sidebar</title>
 
-        <link rel="shortcut icon" href="#" type="image/x-icon">
+        <title><?php echo $template->title_template; ?></title>
+
+        <meta name="description" content="<?php echo $template->description_template; ?>">
+
+        <meta name="keywords" content="<?php echo $keywords; ?>">
+
+        <link rel="icon" href="<?php echo $path; ?>views/assets/img/template/<?php echo $template->id_template; ?>/<?php echo $template->icon_template; ?>">
+        
         <!-- Google Font: Source Sans Pro -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <?php echo urldecode($fontFamily); ?>
     
         <!-- =============
                 CSS
@@ -32,6 +95,27 @@ $path = TemplateController::path();
         <link rel="stylesheet" href="<?php echo $path ?>views/assets/css/template/template.css">
         <!-- CSS Productos -->
         <link rel="stylesheet" href="<?php echo $path ?>views/assets/css/products/products.css">
+
+        <style>
+            body {
+                font-family: "<?php echo $fontBody; ?>", sans-serif;
+            }
+
+            .slideOpt h1, .slideOpt h2, .slideOpt h3 {
+                font-family: "<?php echo $fontSlide; ?>", sans-serif;
+            }
+
+            .topColor {
+                background: <?php echo $topColor->background; ?>; 
+                color: <?php echo $topColor->color; ?>;
+            }
+
+            .templateColor, .templateColor:hover, a.templateColor {
+                background: <?php echo $templateColor->background; ?> !important;
+                /* background: #0CC0DF;  */
+                color: <?php echo $templateColor->color; ?> !important;
+            }
+        </style>
 
         <!-- =============
                 JS
