@@ -12,7 +12,7 @@
             
             <h2 style="color: #FFF; text-shadow: 2px 2px 5px #000;">50% off</h2>
 
-            <h3 style="color: #FFF; text-shadow: 2px 2px 5px #000;">Termina el 31 de Octubre</h3>
+            <h3 style="color: #FFF; text-shadow: 2px 2px 5px #000;">Termina el 24 de Diciembre</h3>
             
 
 

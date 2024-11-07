@@ -16,11 +16,11 @@
 
                     <div class="slideText" style="top: 20%; left: 10%; width:40%">
 
-                        <h1 class="text-uppercase" style="color: #333">Lorem Ipsum</h1>
+                        <h1 class="text-uppercase" style="color: #333">Rendimiento garantizado</h1>
 
-                        <h2 class="text-uppercase" style="color: #777">Lorem ipsum dolor sit</h2>
+                        <h2 class="text-uppercase" style="color: #777">Tu aliado digital</h2>
 
-                        <h3 class="text-uppercase" style="color: #888">Lorem ipsum dolor sit</h3>
+                        <h3 class="text-uppercase" style="color: #888">Innovación a tu alcance</h3>
 
                         <a href="#">
 
@@ -48,11 +48,11 @@
 
                     <div class="slideText" style="top: 20%; right: 15%; width:40%">
 
-                        <h1 class="text-uppercase" style="color: #FFF">Lorem Ipsum</h1>
+                        <h1 class="text-uppercase" style="color: #FFF">Rendimiento profesional</h1>
 
-                        <h2 class="text-uppercase" style="color: #FFF">Lorem ipsum dolor sit</h2>
+                        <h2 class="text-uppercase" style="color: #FFF">Experiencia superior</h2>
 
-                        <h3 class="text-uppercase" style="color: #FFF">Lorem ipsum dolor sit</h3>
+                        <h3 class="text-uppercase" style="color: #FFF">Potencia en cada clic</h3>
 
                         <a href="#">
 

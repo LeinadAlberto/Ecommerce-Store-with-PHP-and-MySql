@@ -57,11 +57,11 @@
 
                     <figure class="imgProduct">
 
-                        <img src="<?php echo $path; ?>views/assets/img/products/ropa/1/ropa01.jpg" class="img-fluid">
+                        <img src="<?php echo $path; ?>views/assets/img/products/ropa/1/ropa01.png" class="img-fluid">
 
                     </figure>
 
-                    <h5><small class="text-uppercase text-muted">Falda de flores</small></h5>
+                    <h5><small class="text-uppercase text-muted">Microsoft Surface Pro 7</small></h5>
 
                 </a>
 
@@ -75,7 +75,7 @@
 
                     <h5 class="float-start text-uppercase text-muted">
 
-                        <del class="small" style="color: #BBB;">USD $23</del> $10
+                        <del class="small" style="color: #BBB;">Bs 6,299.00</del> Bs 5199
 
                     </h5>
 

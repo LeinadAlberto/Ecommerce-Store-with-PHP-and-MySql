@@ -1,9 +1,28 @@
 <?php 
+/* =======================================
+        INICIAR VARIABLES DE SESIÓN
+========================================*/
+ob_start();
+
+session_start();
 
 /* =========================
         VARIABLE PATH
 ==========================*/
 $path = TemplateController::path();
+
+/* =======================================
+        CAPTURAR LAS RUTAS DE LA URL
+========================================*/
+$routesArray = explode("/", $_SERVER["REQUEST_URI"]); /* Captura la url que se escribe en la barra del navegador */
+
+array_shift($routesArray); /* Elimina el primero elemento del arreglo */
+
+foreach ($routesArray as $key => $value) {
+
+    $routesArray[$key] = explode("?", $value)[0];
+
+}
 
 /* =======================================
         SOLICITUD GET DE TEMPLATE
@@ -146,14 +165,30 @@ echo "</pre>"; */
                 include "modules/navbar.php"; 
                 /* /.navbar */
                 
-                /* Main Sidebar Container */
-                include "modules/sidebar.php";
-                /* /.main sidebar container */
+                if (isset($_SESSION["admin"])) {
+                    
+                     /* Main Sidebar Container */
+                    include "modules/sidebar.php";
+                    /* /.main sidebar container */
 
-                /* Content Wrapper. Contains page content */
-                include "pages/home/home.php";
-                /* /.content-wrapper */
-            
+                }
+
+                if (!empty($routesArray[0])) {
+
+                    if ($routesArray[0] == "admin") {
+
+                        include "pages/admin/admin.php";
+
+                    }
+
+                } else {
+
+                    /* Content Wrapper. Contains page content */
+                    include "pages/home/home.php";
+                    /* /.content-wrapper */
+
+                }
+
                 /* Main Footer */
                 include "modules/footer.php"; 
                 /* /.main footer */
